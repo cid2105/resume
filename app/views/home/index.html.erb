@@ -78,7 +78,41 @@ Born and raised in Great Neck, New York, Cole Diamond is a senior at Columbia Un
 				<div class="sidebar" style="margin-bottom:0px; padding:0px; font-size:10px;">
 
 					<h2 style="margin-bottom:3px; margin-top:0px; padding:0px;">Relevant Coursework</h2>
-						<ul style="margin-top:8px;">	
+						
+						<div id="myCanvasContainer">
+ 							<canvas width="150" height="250" id="myCanvas">
+						  		<p>Anything in here will be replaced on browsers that support the canvas element</p>
+							  	<ul>
+									<li><a>Machine Learning</a></li>
+    								<li><a>Artificial Intelligence</a></li>
+    								<li><a>Quantum Computing</a></li>
+    								<li><a>Advanced Programming</a></li>
+    								<li><a>Compilers</a></li>
+    								<li><a>Computer Networks</a></li>
+    								<li><a>Computational Robotics</a></li>
+    								<li><a>Introduction to Databases</a></li>
+    								<li><a>Physics: Mechanics and E&M</a></li>
+    								<li><a>Multivariable Calculus</a></li>
+    								<li><a>Discrete Mathematics</a></li>
+    								<li><a>Natural Language Processing</a></li>
+    								<li><a>Introduction to Accounting and Finance</a></li>
+    								<li><a>Macroeconomics</a></li>
+    								<li><a>Microeconomics</a></li>
+    								<li><a>Scientific Computation</a></li>
+    								<li><a>Computational Linear Algebra</a></li>
+    								<li><a>User Interface Design</a></li>
+    								<li><a>Introduction to Statistics and Probability</a></li>
+    								<li><a>General Chemistry</a></li>
+    								<li><a>Introduction to Electrical Engineering</a></li>
+    								<li><a>Calculus I-IV</a></li>
+    								<li><a>Computer Vision</a></li>
+    								<li><a>Financial Economics</a></li>
+    								<li><a>Econometrics </a></li>
+							  	</ul>
+						 	</canvas>
+						</div>
+	
+						<!-- <ul style="margin-top:8px;">	
 						<li class="li-moreinfo" style="padding:0px;">
 							<p class="nopadding">
 						<span style="margin-bottom:8px;">	<span style="font-weight:bold;">Mathematics</span>Calculus I-V, Discrete Math, Linear Algebra
@@ -89,7 +123,7 @@ Born and raised in Great Neck, New York, Cole Diamond is a senior at Columbia Un
 							</p>
 							                                                                      
 						</li>
-						</ul>
+						</ul> -->
 					</div>
 			
 			
@@ -225,6 +259,24 @@ Born and raised in Great Neck, New York, Cole Diamond is a senior at Columbia Un
 					'overlayShow'	:	false
 			}).find("img").tipsy({fade: true, gravity: 's'})
 			
+			
+   			if( ! $('#myCanvas').tagcanvas({
+     			textColour : '#08f',
+     			outlineThickness : .5,
+     			maxSpeed : 0.3,
+     			wheelZoom : false,
+     			textHeight: 8,
+     			depth : 0.60,
+     			txtScale: 5,
+     			zoom: .9,
+     			radiusX: .8,
+     			radiusY: 4
+   				})) {
+     			// TagCanvas failed to load
+     			$('#myCanvasContainer').hide();
+   			}
+ 
+
 			$("[rel*='tipsy']").tipsy({fade:true, gravity:'s'});
 			
 			$("[rel*='fancybox']").fancybox();
