@@ -25,8 +25,9 @@ $.notification('Thank you for contacting me!', {
 		    left: 47px;"><h1> Cole Diamond</h1></div>
 		<ul id="menu">
 			<li class="active"><a href="#home">Home</a></li>
+			<li><a href="#hardware">Hardware</a></li>
 			<li><a href="#education">Education</a></li>
-			<li><a href="#skills">Skills</a></li>
+			<li><a href="#skills">Software</a></li>
    			<li><a href="#work">Work</a></li>
 			<li><a href="#networks">Networks</a></li>
    			<li><a href="#contact">Contact</a></li>
@@ -46,7 +47,7 @@ $.notification('Thank you for contacting me!', {
    <h1>Welcome</h1>
 	<p><a rel="fancybox" title="Cole Diamond" href="<%= asset_path("profile_picture.jpg") %>" ><%= image_tag "profile_picture.jpg", :width => "80", :height=>"80", :rel =>"tipsy", :title => "Cole Diamond" %></a>
 
-Born and raised in Great Neck, New York, Cole Diamond is a senior at Columbia University where he studies Computer Science and Financial Economics. Cole is passionate about web development, building new ideas and innovating. A HackNY Fellow (Class of 2011), Cole thoroughly enjoys building applications that make life easier. Feel free to explore the site to find out more about Cole.</p>
+Hailing from Great Neck, New York, Cole Diamond is a senior at Columbia University where he studies Computer Science and Financial Economics. Cole is passionate about web development, building new ideas and innovating. A member of the <a href="http://www.dormroomfund.com">Dorm Room Fund</a> and HackNY Fellow (Class of 2011), Cole thoroughly enjoys building applications that make life easier. Feel free to explore the site to find out more about Cole.</p>
 			</div>
 
 	<div class="sidebar">
@@ -63,6 +64,25 @@ Born and raised in Great Neck, New York, Cole Diamond is a senior at Columbia Un
 			<a class="button" href="#contact">Contact me</a>
 		</div>
 	</div><!-- End Menu Home -->
+
+		<!-- Menu Networks --><div id="menu_hardware" class="contentitem">
+		<div class="pagetitle">Cole Diamond - Hardware Projects</div>
+		<h1>Hardware Hacks</h1>
+
+			<ul class="networks">
+				<li><a href="http://www.youtube.com/watch?v=Mx68w5JVB4g" target="_blank"><span class="background"></span><span class="content"><img src="assets/prettyPhoto/default/default_thumb.png" alt=""/><span class="title"><span class="sname">Fingerprint Credit Card Reader</span><span class="surl"><br/></span></span></span></a></li><br/><br/><br/>
+				<li><a href="http://www.youtube.com/watch?v=W3g_rOZ9jno" target="_blank"><span class="background"></span><span class="content"><img src="assets/prettyPhoto/default/default_thumb.png" alt=""/><span class="title"><span class="sname">Speech-to-Text Wearable Glasses</span><span class="surl"><br/></span></span></span></a></li><br/><br/><br/>
+				<li><a href="http://www.youtube.com/watch?v=P3Lkn3tCQtg" target="_blank"><span class="background"></span><span class="content"><img src="assets/prettyPhoto/default/default_thumb.png" alt=""/><span class="title"><span class="sname">Dorm Room Automation</span><span class="surl"><br/></span></span></span></a></li>
+			</ul>
+		
+		</div><!-- End Menu Networks -->
+
+	
+
+
+
+
+	
 
 	<div id="menu_education" class="contentitem">
 			<div class="pagetitle">Cole Diamond - Education</div>
@@ -131,7 +151,7 @@ Born and raised in Great Neck, New York, Cole Diamond is a senior at Columbia Un
 	 </div>
 
 	<div id="menu_skills" class="contentitem">
-			<div class="pagetitle">Cole Diamond - Skills</div>
+			<div class="pagetitle">Cole Diamond - Software Skills</div>
 				<div class="main">
 		<h1>Programming Skills</h1>
 			<ul class="skills">
@@ -191,9 +211,7 @@ Born and raised in Great Neck, New York, Cole Diamond is a senior at Columbia Un
 				<p class="nopadding">
 			
 				<ul class="thumb">
-					<a  href="<%= asset_path "resume.jpg" %>" rel="resume" ><%= image_tag "resume.jpg", :height => "153px", :width => "135px;", :style => "position:absolute; z-index:1000;", :title => "Click to Preview" %></a>
-					<a  href="<%= asset_path "resume2.jpg" %>" rel="resume"></a>
-					
+					<a  href="<%= asset_path "resume_pic.png" %>" rel="resume" ><%= image_tag "resume_pic.png", :height => "153px", :width => "135px;", :style => "position:absolute; z-index:1000;", :title => "Click to Preview" %></a>
 					</li>
 				</ul>
 				</p>
@@ -213,6 +231,7 @@ Born and raised in Great Neck, New York, Cole Diamond is a senior at Columbia Un
 				<li><a href="http://www.linkedin.com/in/colediamond" target="_blank"><span class="background"></span><span class="content"><img src="assets/networks/linkedin.png" alt="linkedin"/><span class="title"><span class="sname">LinkedIn</span><span class="surl"><br/>linkedin.com/in/colediamond</span></span></span></a></li>
 			</ul>
 			</div><!-- End Menu Networks -->
+
 
 		<!-- Menu Contact -->
 		<div id="menu_contact" class="contentitem">
@@ -266,7 +285,8 @@ Born and raised in Great Neck, New York, Cole Diamond is a senior at Columbia Un
      			maxSpeed : 0.3,
      			wheelZoom : false,
      			textHeight: 8,
-     			depth : 0.60,
+     			shape: "hcylinder",
+     			depth : 0.50,
      			txtScale: 5,
      			zoom: .9,
      			radiusX: .8,
