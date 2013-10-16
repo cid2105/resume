@@ -47,7 +47,7 @@ $.notification('Thank you for contacting me!', {
    <h1>Welcome</h1>
 	<p><a rel="fancybox" title="Cole Diamond" href="<%= asset_path("profile_picture.jpg") %>" ><%= image_tag "profile_picture.jpg", :width => "80", :height=>"80", :rel =>"tipsy", :title => "Cole Diamond" %></a>
 
-Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineering where he majored in Computer Science and minored in Economics. A member of the <a href="http://www.dormroomfund.com/newyork" target="_blank">Dorm Room Fund</a> and <a href="http://apply.hackny.org" target="_blank">HackNY Fellow</a> (Class of 2011), Cole is passionate about technological entrepreneurship. When he's not chasing big dreams, Cole loves to play cello.</p>
+Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineering where he majored in Computer Science and minored in Economics. A former member of the <a href="http://www.dormroomfund.com/newyork" target="_blank">Dorm Room Fund</a> and <a href="http://apply.hackny.org" target="_blank">HackNY Fellow</a> (Class of 2011), Cole is passionate about technological entrepreneurship. Currently, Cole is a Program Manager at Microsoft.</p>
 			
 
 		
@@ -249,6 +249,7 @@ Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineeri
 				<input type="text" name="name" value="name"/>
 				<input type="text" name="email" value="email"/>
 				<textarea name="message" rows="4" cols="4">message</textarea>
+				<%= show_simple_captcha %>
 				<input type="submit" class="sendbutton sendmail" value="send"/>
 				</form>
 			</div>

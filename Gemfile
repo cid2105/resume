@@ -45,3 +45,7 @@ group :test do
   # Pretty printed test output
   gem 'turn', '0.8.2', :require => false
 end
+
+gem 'simple_captcha', :git => 'git://github.com/galetahub/simple-captcha.git'
+
+

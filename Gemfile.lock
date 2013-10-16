@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/galetahub/simple-captcha.git
+  revision: e99cc7e8bf6b8cf8f03878c657ae7d1e6efe7c58
+  specs:
+    simple_captcha (0.1.5)
+
+GIT
   remote: git://github.com/rails/rails.git
   revision: cd392fd4da08d1d3b73fa66e945594b89d5f75de
   branch: 3-1-stable
@@ -149,6 +155,7 @@ DEPENDENCIES
   pg
   rails!
   sass-rails!
+  simple_captcha!
   sqlite3
   therubyracer
   thin
