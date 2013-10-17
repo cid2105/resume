@@ -17,6 +17,7 @@ group :production do
 	gem "thin"
 	gem "heroku"
  	gem 'therubyracer'
+ 	gem 'rails_12factor'
 end
 
 # Gems used only for assets and not required
