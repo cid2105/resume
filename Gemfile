@@ -50,7 +50,6 @@ group :test do
   gem 'turn', '0.8.2', :require => false
 end
 
-gem "recaptcha", :require => "recaptcha/rails"
 gem "gritter", "1.0.3"
 
 
