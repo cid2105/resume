@@ -5,3 +5,4 @@
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
 Resume::Application.config.secret_token = '575d1fb927bced12c094971d68aa24c21a8ef162a5480ccc8dcc777eadb8195d685b64852519ec6f294afc2ad97db125d930689e8310eab76b2997ec27567518'
+Resume::Application.config.secret_key_base = 'fljoijrw84tho0v98du08234zxkxlmvmdlkf26238jeqrw33233je3poti3n3k2mcxef162a5480ccc8dcc777eadb8195d685b64852519ec6f294afc2ad97db1'

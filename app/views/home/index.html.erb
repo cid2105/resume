@@ -12,6 +12,7 @@ $.notification('Thank you for contacting me!', {
 </script>
 <% end %>
 
+
 <!-- Wrapper --><div id="wrapper">
 	<!-- Vcard --><div id="vcard">
 		<div class="clearpx"></div>
@@ -19,10 +20,15 @@ $.notification('Thank you for contacting me!', {
 
 <!-- Header -->
    <div id="header">
+
    
 			
 			<div style="float:left; position:absolute; top: 57px; 
-		    left: 47px;"><h1> Cole Diamond</h1></div>
+		    left: 47px;">
+
+		    <h1> Cole Diamond</h1>
+
+		    </div>
 		<ul id="menu">
 			<li class="active"><a href="#home">Home</a></li>
 			<li><a href="#skills">Software</a></li>
@@ -32,6 +38,7 @@ $.notification('Thank you for contacting me!', {
 			<li><a href="#networks">Networks</a></li>
    			<li><a href="#contact">Contact</a></li>
 		</ul>
+
 	</div><!-- End Header -->
 
 	<hr/>
@@ -44,22 +51,31 @@ $.notification('Thank you for contacting me!', {
 	<div id="menu_home" class="contentitem">
 		<div class="main">
 			<div class="pagetitle">Cole Diamond - Welcome</div>
-   <h1>Welcome</h1>
-	<p><a rel="fancybox" title="Cole Diamond" href="<%= asset_path("profile_picture.jpg") %>" ><%= image_tag "profile_picture.jpg", :width => "80", :height=>"80", :rel =>"tipsy", :title => "Cole Diamond" %></a>
+   
+	<p>
+				<iframe width="350" height="220" src="http://www.youtube.com/embed/VBOKFAnVjas?autoplay=1" frameborder="0" allowfullscreen style="float:right;"></iframe>
+</p>
+	
 
-Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineering where he majored in Computer Science and minored in Economics. A former member of the <a href="http://www.dormroomfund.com/newyork" target="_blank">Dorm Room Fund</a> and <a href="http://apply.hackny.org" target="_blank">HackNY Fellow</a> (Class of 2011), Cole is passionate about technological entrepreneurship. Currently, Cole is a Program Manager at Microsoft.</p>
+<!-- 	
+<span style="float:right; text-size:9px;">
+Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineering where he majored in Computer Science and minored in Economics. A former member of the <a href="http://www.dormroomfund.com/about" target="_blank">Dorm Room Fund</a> and <a href="http://apply.hackny.org" target="_blank">HackNY Fellow</a> (Class of 2011), Cole is passionate about technological entrepreneurship. Currently, Cole is a Program Manager at Microsoft.</span> -->
 			
-
+			
 		
 			</div>
 
 	<div class="sidebar">
 		<h2>About Me</h2>
+
+		<a rel="fancybox" title="Cole Diamond" href="<%= asset_path("profile_picture.jpg") %>" ><%= image_tag "profile_picture.jpg", :width => "80", :height=>"80", :rel =>"tipsy", :title => "Cole Diamond" %></a>
 			<ul>
 				<li>Columbia Engineering, 2013</li>
-				<li>Computer Science Major</li>
-				<li>Economics Minor</li>
-				<li>Interests: Quant Finance, <br/><br/> &nbsp; &nbsp;Machine Learning &amp; Robotics</li>
+				
+				<li><a href="http://apply.hackny.org" target="_blank">HackNY Fellow</a> (2011)</li>
+				<li> Inaugural <a href="http://www.dormroomfund.com/about" target="_blank">Dorm Room Fund</a> <br/>
+					&nbsp;&nbsp;&nbsp;NYC Investment Team </li>
+				<li>Program Manager at &nbsp;&nbsp;&nbsp;Microsoft</li>
 			</ul>
 
 		<hr class="spacer"/>
@@ -244,12 +260,17 @@ Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineeri
 
 		<h1>Contact</h1>
 	
-			<div id="email_form">
+		<div id="email_form">
+			<p style="padding:4px 9px 0 0;">10301 NE 10th Street, Apt 1455
+			 <br/>Bellevue WA 98004<br/>United States<br/><br/>Cell: +516 996 7037<br/>Email: <a href="mailto:cole.ian.diamond@gmail.com">cole.ian.diamond@gmail.com</a><br/></p>
+		</div>
+			<!-- <div id="email_form">
 				<form method="post">
-				<input type="text" name="name" value="name"/>
+				<%= recaptcha_tags %>
+				<div style="float:right;">
 				<input type="text" name="email" value="email"/>
 				<textarea name="message" rows="4" cols="4">message</textarea>
-				<%= show_simple_captcha %>
+				</div>
 				<input type="submit" class="sendbutton sendmail" value="send"/>
 				</form>
 			</div>
@@ -260,12 +281,12 @@ Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineeri
 						<p>I'll get back to you as soon as possible.<br/>In the meanwhile check out my <a href="#networks">social network profiles</a>.</p>
 					</div>
 				</div>
-
+ -->
 				<div class="sidebar">	
-			<h2>Cole Diamond</h2>
-			<p style="padding:4px 9px 0 0;">2849 Lerner Hall, 2920 Broadway
-			 <br/>New York NY 10027<br/>United States<br/><br/>Cell: +516 996 7037<br/>Email: <a href="mailto:cid2105@columbia.edu">cid2105@columbia.edu</a><br/></p><hr class="spacer" /><a class="button" href="<%= asset_path("Cole_Ian_Diamond.vcf")%>">Download vCard</a>
-	</div>
+				<hr class="spacer" />
+					<a class="button" href="<%= asset_path("Cole_Ian_Diamond.vcf")%>">Download Contact</a>
+				</div>
+		</div>
 	</div><!-- End Menu Contact -->
 	</div><!-- End Scroller -->
 	</div><!-- End Content -->

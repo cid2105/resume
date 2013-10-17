@@ -1,11 +1,15 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem 'rails',     :git => 'git://github.com/rails/rails.git', :branch=>'3-1-stable'
+ruby '2.0.0'
+
+gem 'rails', '>= 4.0.0'
+
+
 
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
+gem 'protected_attributes'
 
 
 group :production do
@@ -18,9 +22,9 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', :git=>"git://github.com/rails/sass-rails.git", :branch=>'3-1-stable'
-  gem 'coffee-rails', '~> 3.1.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier'
 end
 
 group :development do
@@ -46,6 +50,7 @@ group :test do
   gem 'turn', '0.8.2', :require => false
 end
 
-gem 'simple_captcha', :git => 'git://github.com/galetahub/simple-captcha.git'
+gem "recaptcha", :require => "recaptcha/rails"
+gem "gritter", "1.0.3"
 
 

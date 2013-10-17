@@ -18,3 +18,4 @@
 //= require notification
 //= require qtip
 //= require word_cloud
+//= require gritter
