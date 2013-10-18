@@ -9,7 +9,7 @@ July - 2011
 @import "reset.css";
 
 /*----------------------------------General Styles----------------------------------*/
-body{font-size:11px;font-family:"Lucida Grande",Verdana,sans-serif;background:#000 url(vcard/wrapper.jpg) center}
+body{font-size:11px;font-family:"Lucida Grande",Verdana,sans-serif;background:#000 image-url("vcard/wrapper.jpg") center}
 a{color:#6aa2c5}
 p{padding:10px 15px 0 0;color:#777;text-shadow:1px 1px 1px #fff;line-height:16px}
 p img{background:#eee; border:5px solid #e6e6e6; float:left;margin:0 10px 10px 0}
