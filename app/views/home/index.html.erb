@@ -12,6 +12,18 @@ $.notification('Thank you for contacting me!', {
 </script>
 <% end %>
 
+<style>
+.gritter p {text-shadow:0px;}
+</style>
+<% unless cookies["saw_popup"] == 'true' %>
+<script>
+<%= add_gritter('<a href="http://emotion-classification.herokuapp.com"> Emotion Classification using Randomized Forests</a>', :title => "My Latest Hack", :time => 400000 ) %>
+</script>
+<% cookies["saw_popup"] = { :value => "true", :expires => 1.day.from_now } %>
+<% end %>
+
+
+
 
 <!-- Wrapper --><div id="wrapper">
 	<!-- Vcard --><div id="vcard">
@@ -43,6 +55,11 @@ $.notification('Thank you for contacting me!', {
 
 	<hr/>
 
+<div style="position:absolute; top:118px; right:30px; width: 730px;">
+<span style="text-size:9px; position:absolute;" headline>
+Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineering where he majored in Computer Science and minored in Economics. A former member of the <a href="http://www.dormroomfund.com/about" target="_blank">Dorm Room Fund</a> and <a href="http://apply.hackny.org" target="_blank">HackNY Fellow</a> (Class of 2011), Cole is passionate about technological entrepreneurship. Currently, Cole is a Program Manager at Microsoft.</span> 
+</div>
+
 		<!-- Content --><div id="content">
 
 <!-- Scroller -->
@@ -51,15 +68,15 @@ $.notification('Thank you for contacting me!', {
 	<div id="menu_home" class="contentitem">
 		<div class="main">
 			<div class="pagetitle">Cole Diamond - Welcome</div>
-   
-	<p>
-				<iframe width="350" height="220" src="http://www.youtube.com/embed/VBOKFAnVjas?autoplay=1" frameborder="0" allowfullscreen style="float:right;"></iframe>
-</p>
-	
 
-<!-- 	
-<span style="float:right; text-size:9px;">
-Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineering where he majored in Computer Science and minored in Economics. A former member of the <a href="http://www.dormroomfund.com/about" target="_blank">Dorm Room Fund</a> and <a href="http://apply.hackny.org" target="_blank">HackNY Fellow</a> (Class of 2011), Cole is passionate about technological entrepreneurship. Currently, Cole is a Program Manager at Microsoft.</span> -->
+				<iframe width="350" height="220" src="http://www.youtube.com/embed/VBOKFAnVjas?autoplay=1" frameborder="0" allowfullscreen style="float:right; position:relative; right: 57px;"></iframe>
+
+		</p>
+	
+	<!-- <p> Latest hack:  <a href="emotion-classification.herokuapp.com"> Emotion Classification using Randomized Forests</a> </p> -->
+
+
+
 			
 			
 		
@@ -68,7 +85,8 @@ Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineeri
 	<div class="sidebar">
 		<h2>About Me</h2>
 
-		<a rel="fancybox" title="Cole Diamond" href="<%= asset_path("profile_picture.jpg") %>" ><%= image_tag "profile_picture.jpg", :width => "80", :height=>"80", :rel =>"tipsy", :title => "Cole Diamond" %></a>
+		<a title="Cole Diamond" href="<%= asset_path("profile_picture.jpg") %>" aboutme>
+			<%= image_tag "profile_picture.jpg", :width => "80", :height=>"80" %></a>
 			<ul style="font-size:10px; width:300px;">
 				<li>Columbia Engineering, 2013</li>
 				
@@ -79,7 +97,7 @@ Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineeri
 
 		<hr class="spacer"/>
 
-				<a class="button pull-right" style="position:relative; bottom: 15px;" href="http://colediamond.wordpress.com" target="_blank">Blog</a>
+				<!-- <a class="button pull-right" style="position:relative; bottom: 15px;" href="http://colediamond.wordpress.com" target="_blank">Blog</a> -->
 	
 		</div>
 	</div><!-- End Menu Home -->
@@ -124,31 +142,31 @@ Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineeri
  							<canvas width="150" height="250" id="myCanvas">
 						  		<p>Anything in here will be replaced on browsers that support the canvas element</p>
 							  	<ul>
-									<li><a>Machine Learning</a></li>
-    								<li><a>Artificial Intelligence</a></li>
-    								<li><a>Quantum Computing</a></li>
-    								<li><a>Advanced Programming</a></li>
-    								<li><a>Compilers</a></li>
-    								<li><a>Computer Networks</a></li>
-    								<li><a>Computational Robotics</a></li>
-    								<li><a>Introduction to Databases</a></li>
-    								<li><a>Physics: Mechanics and E&M</a></li>
-    								<li><a>Multivariable Calculus</a></li>
-    								<li><a>Discrete Mathematics</a></li>
-    								<li><a>Natural Language Processing</a></li>
-    								<li><a>Introduction to Accounting and Finance</a></li>
-    								<li><a>Macroeconomics</a></li>
-    								<li><a>Microeconomics</a></li>
-    								<li><a>Scientific Computation</a></li>
-    								<li><a>Computational Linear Algebra</a></li>
-    								<li><a>User Interface Design</a></li>
-    								<li><a>Introduction to Statistics and Probability</a></li>
-    								<li><a>General Chemistry</a></li>
-    								<li><a>Introduction to Electrical Engineering</a></li>
-    								<li><a>Calculus I-IV</a></li>
-    								<li><a>Computer Vision</a></li>
-    								<li><a>Financial Economics</a></li>
-    								<li><a>Econometrics </a></li>
+									<li><a href="#">Machine Learning</a></li>
+    								<li><a href="#">Artificial Intelligence</a></li>
+    								<li><a href="#">Quantum Computing</a></li>
+    								<li><a href="#">Advanced Programming</a></li>
+    								<li><a href="#">Compilers</a></li>
+    								<li><a href="#">Computer Networks</a></li>
+    								<li><a href="#">Computational Robotics</a></li>
+    								<li><a href="#">Introduction to Databases</a></li>
+    								<li><a href="#">Physics: Mechanics and E&M</a></li>
+    								<li><a href="#">Multivariable Calculus</a></li>
+    								<li><a href="#">Discrete Mathematics</a></li>
+    								<li><a href="#">Natural Language Processing</a></li>
+    								<li><a href="#">Introduction to Accounting and Finance</a></li>
+    								<li><a href="#">Macroeconomics</a></li>
+    								<li><a href="#">Microeconomics</a></li>
+    								<li><a href="#">Scientific Computation</a></li>
+    								<li><a href="#">Computational Linear Algebra</a></li>
+    								<li><a href="#">User Interface Design</a></li>
+    								<li><a href="#">Introduction to Statistics and Probability</a></li>
+    								<li><a href="#">General Chemistry</a></li>
+    								<li><a href="#">Introduction to Electrical Engineering</a></li>
+    								<li><a href="#">Calculus I-IV</a></li>
+    								<li><a href="#">Computer Vision</a></li>
+    								<li><a href="#">Financial Economics</a></li>
+    								<li><a href="#">Econometrics </a></li>
 							  	</ul>
 						 	</canvas>
 						</div>
@@ -176,34 +194,38 @@ Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineeri
 				<div class="main">
 		<h1>Programming Skills</h1>
 			<ul class="skills">
-				<li><span class="topic">Proficiency (4 years +)</span>Java 6.0, Ruby, HTML/CSS/JQuery &amp; SQL </li>
-				<li><span class="topic">Experience (3 years +)</span>Perl, Python,  C/C++ &amp; GitHub</li>
-				<li><span class="topic">In training (1 year)</span>JSP, PHP, MongoDB &amp; PostgreSQL</li>
-				<li><span class="topic">Frameworks</span> Django and Ruby on Rails (2.3, 3.0, 3.1), 3 years</li>
+				<li><span class="topic">Proficiency (5 years +)</span>Java 6.0, C, Ruby, Python, HTML/CSS/JQuery, SQL</li>
+				<li><span class="topic">Experience (3 years +)</span>Perl, C++, PostgreSQL &amp; GitHub</li>
+				<li><span class="topic">In training (< 2 years)</span>OCAML, PHP, MongoDB &amp; Objective C</li>
+				<li><span class="topic">Frameworks (5 Years)</span> Django and Ruby on Rails</li>
 			</ul>
 				</div>
 
 		<div class="sidebar">
 
-		<h2 style="margin-bottom:3px;">Websites Created</h2>
+		<h2 style="margin-bottom:3px;">Apps</h2>
 			<ul style="margin-top:3px;">	
 			<li class="li-moreinfo">
-				<p class="nopadding" sites >
+				<p class="nopadding" sites style="font-size:9px;">
 					
-					<a href="http://stakd.herokuapp.com" target="_blank" site="stakd" description="Stakd is a dynamic listing tool
+					<a href="http://emotion-classification.herokuapp.com" target="_blank" site="Emotion Classification" description="http://emotion-classification.herokuapp.com - trained on the ISEAR dataset using random forests.">Emotion-Classifier</a><br/>
+						<b>Machine Learning to predict emotions</b> 
+					<br/><br/>
+
+					<a href="http://bit.ly/Sr2stP" target="_blank" site="stakd" description="Stakd is a dynamic listing tool
 					 		that exposes similarities and differences between you and your peers.">Stakd</a><br/>
-						<b>Stack anything <a href="http://bit.ly/Sr2stP">(video demo)</a></b> 
+						<b>Stack anything </b> 
 					<br/><br/>
 					
-					 <a href="http://www.greekgavel.com" target="_blank" site="greekgavel" description="<br/>A social networking site for fraternities and sororities to consolidate greek life on all fronts - the individual chapter, the larger organization and greek life at large for a university. The site offers a directory of all members of the organization, networking opportunities, a bulletin board for quick announcements, a gallery, a personal message utility and a forum." >GreekGavel</a><br/>
-					<b>A Social Network for Fraternities <a href="http://www.youtube.com/watch?v=ph24Qw5m93g">(video demo)</a></b>
+					 <a href="http://www.youtube.com/watch?v=ph24Qw5m93g" target="_blank" site="greekgavel" description="<br/>A social networking site for fraternities and sororities to consolidate greek life on all fronts - the individual chapter, the larger organization and greek life at large for a university. The site offers a directory of all members of the organization, networking opportunities, a bulletin board for quick announcements, a gallery, a personal message utility and a forum." >GreekGavel</a><br/>
+					<b>A Social Network for Fraternities </b>
 					<br/><br/>
 					 <a href="http://www.matchu.me" target="_blank" site="matchume" description="Columbia's digital wingman. Anonymously find out whether your love is reciprocated. If it is - then you will have a new match. Otherwise, your romantic interest will stay anonymous. Features a 'secret admirer' utility, most matchable feed, private message forum with image/video embedding and multiple ajax widgets.">MatchU.Me</a><br/>
 						<b>Find Your Match, 100% Anonymously</b>
 					<br/><br/>
-					<a href="http://www.mealmecca.com" target="_blank" site="mealmecca" description="Leverages HTML 5's geolocation tool to determine your location and then feeds the zip code into Yelp. Yelp returns a list of restaurants in the specified location and I either add the restaurant to my database or fetch it. The basic idea is to find out *what* to order... not just *where* to order.">MealMecca</a><br/>
+					<!-- <a href="http://www.mealmecca.com" target="_blank" site="mealmecca" description="Leverages HTML 5's geolocation tool to determine your location and then feeds the zip code into Yelp. Yelp returns a list of restaurants in the specified location and I either add the restaurant to my database or fetch it. The basic idea is to find out *what* to order... not just *where* to order.">MealMecca</a><br/>
 						<b>Rate Menus, Not Restaurants</b> 
-					<br/> 					<br/>    
+					<br/> 					<br/>     -->
 					
 					                                                                                  
 				</p>	
@@ -217,9 +239,16 @@ Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineeri
 
 					<div class="main" style="margin-right: 0px; width: 70%;">
 			<h1>Work experience</h1>
+
 			  <ul class="skills">
-								<li><span class="topic">BlackRock </span><br/><p>Portfolio Analytics Group Intern New York, NY (05/2012 - 08/2012) </p></li>
-				<li><span class="topic">Gilt Groupe </span><br/><p>Software Engineer Intern New York, NY (05/2011 - 08/2011) </p></li>
+			  <li>
+			  	<span class="topic">Microsoft</span><br/>
+			  	<p><%= "program manager".titleize() %>  (09/2013 - Present)</p>
+			  </li>
+			  <li>
+			  	<span class="topic">BlackRock </span><br/>
+			  		<p>Portfolio Analytics Group Intern New York, NY (05/2012 - 08/2012) </p></li>
+			  <li><span class="topic">Gilt Groupe </span><br/><p>Software Engineer Intern New York, NY (05/2011 - 08/2011) </p></li>
 				<li><span class="topic">JP Morgan Chase</span><br/><p><%= "risk management intern".titleize() %>  (06/2010 - 08/2010)</p></li>
 			    <li><span class="topic">Columbia University </span><br/><p> <%= "research assistant: machine learning".titleize %> (06/2009 - 08/2009)</p></li>
 			  </ul>
@@ -265,6 +294,8 @@ Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineeri
 			<p style="padding:4px 9px 0 0;">10301 NE 10th Street, Apt 1455
 			 <br/>Bellevue WA 98004<br/>United States<br/><br/>Cell: +516 996 7037<br/>Email: <a href="mailto:cole.ian.diamond@gmail.com">cole.ian.diamond@gmail.com</a><br/></p>
 		</div>
+
+
 			<!-- <div id="email_form">
 				<form method="post">
 				
@@ -283,7 +314,9 @@ Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineeri
 					</div>
 				</div>
  -->
-				<div class="sidebar">	
+				<div class="sidebar">
+
+					<%= image_tag "cole.png",  :width => "150px;", :style => "position:relative; right: 210px; bottom: 150px;" %>
 				<hr class="spacer" />
 					<a class="button" href="<%= asset_path("Cole_Ian_Diamond.vcf")%>">Download Contact</a>
 				</div>
@@ -297,6 +330,33 @@ Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineeri
 	    <script type="text/javascript">
 		$(document).ready(function()
 		{
+
+
+		// 	$.notification('Latest hack: <a href="emotion-classification.herokuapp.com"> Emotion Classification using Randomized Forests</a>', {
+		// 	className: 'jquery-notification',
+		// 	duration: 5000,
+		// 	freezeOnHover: false,
+		// 	hideSpeed: 250,
+		// 	position: 'top-right',
+		// 	showSpeed: 250,
+		// 	zIndex: 99999
+		// });
+			
+
+			// $('[headline]').marquee('pointer').mouseover(function () {
+			// $(this).trigger('stop');
+			// }).mouseout(function () {
+			// $(this).trigger('start');
+			// }).mousemove(function (event) {
+			// if ($(this).data('drag') == true) {
+			// this.scrollLeft = $(this).data('scrollX') + ($(this).data('x') - event.clientX);
+			// }
+			// }).mousedown(function (event) {
+			// $(this).data('drag', true).data('x', event.clientX).data('scrollX', this.scrollLeft);
+			// }).mouseup(function () {
+			// $(this).data('drag', false);
+			// });
+
 			$("[rel='resume']").fancybox({
 					'transitionIn'	:	'elastic',
 					'transitionOut'	:	'elastic',
@@ -340,6 +400,7 @@ Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineeri
 
  		   var apiKey = 'ReuyKzSZUUjL';
 
+
 		    // Notice the use of the each method to gain access to each element individually
 		    $('a[site]').each(function()
 		    {
@@ -347,7 +408,7 @@ Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineeri
 		        var url = "assets/" +  $(this).attr('site') + ".png";
 		
 		        // Create image thumbnail using Websnapr thumbnail service
-				thumbnail = "<img alt='Loading thumbnail' width='202px;' height='152px;' src='" + url + "'>" + $(this).attr('description'); 
+				thumbnail = $(this).attr('description'); 
 		        // Setup the tooltip with the content
 		        $(this).qtip(
 		        {
@@ -368,6 +429,25 @@ Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineeri
 		            }
 		        });
 		    });
+
+
+						    $("[aboutme]").qtip({
+		            content: "Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineering where he majored in Computer Science and minored in Economics. A former member of the <a href=\"http://www.dormroomfund.com/about\" target=\"_blank\">Dorm Room Fund</a> and <a href=\"http://apply.hackny.org\" target=\"_blank\">HackNY Fellow</a> (Class of 2011), Cole is passionate about technological entrepreneurship. Currently, Cole is a Program Manager at Microsoft.\n",
+		            position: {
+		                corner: {
+		                    tooltip: 'topMiddle',
+		                    target: 'topMiddle'
+		                }
+		            },
+		            style: {
+		                tip: true, // Give it a speech bubble tip with automatic corner detection
+					    border: {
+					         radius: 8,
+					         color: '#777'
+					      },
+						name: 'light'
+		            }
+		        });
 
 
 		});

@@ -11,7 +11,9 @@ July - 2011
 /*----------------------------------General Styles----------------------------------*/
 body{font-size:11px;font-family:"Lucida Grande",Verdana,sans-serif;background:#000 image-url("vcard/wrapper.jpg") center}
 a{color:#6aa2c5}
-p{padding:10px 15px 0 0;color:#777;text-shadow:1px 1px 1px #fff;line-height:16px}
+p{padding:10px 15px 0 0;color:#777;
+/*text-shadow:1px 1px 1px #fff;*/
+line-height:16px}
 p img{background:#eee; border:5px solid #e6e6e6; float:left;margin:0 10px 10px 0}
 h1{color:#555;font-size:26px;font-weight:normal;text-shadow:1px 1px 1px #fff;margin-bottom:10px}
 h2{color:#636363;font-size:19px;font-weight:normal;text-shadow:1px 1px 1px #fff;padding:0;margin-bottom:15px}
@@ -34,7 +36,9 @@ textarea{font-family:Arial;padding:8px 0 8px 5px;margin:0 0 10px 0;width:420px;b
 
 /*----------------------------------Items----------------------------------*/
 #wrapper{min-width:800px;min-height:500px}
-#vcard{display:none;z-index:2;position:relative;margin:auto;width:800px;height:450px;background:image-url("vcard/wrapper.png");-webkit-box-shadow:0 0 0px #000;-moz-box-shadow:0 0 0px #000;box-shadow:0 0 0px #000}
+#vcard{display:none;z-index:2;position:relative;margin:auto;width:800px;height:450px;
+background:image-url("vcard/wrapper.png");-webkit-box-shadow:0 0 0px #000;
+-moz-box-shadow:0 0 0px #000;box-shadow:0 0 0px #000}
 .main{float:right;width:480px;margin-right:20px;background:image-url("vcard/sidebar.png") repeat-y;padding-left:40px}
 .sidebar{float:left;margin:0px;width:170px;height:240px;}
 .button{padding:6px 8px;border:1px solid #09a0ff;background:image-url("vcard/button.gif") repeat-x;color:#fff;text-shadow:1px 1px 1px #1069a1;text-transform:uppercase;font-size:9px;font-weight:bold;text-decoration:none;-moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px}

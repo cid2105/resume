@@ -19,3 +19,4 @@
 //= require qtip
 //= require word_cloud
 //= require gritter
+//= require marquee
