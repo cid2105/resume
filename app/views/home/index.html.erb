@@ -17,7 +17,7 @@ $.notification('Thank you for contacting me!', {
 </style>
 <% unless cookies["saw_popup"] == 'true' %>
 <script>
-<%= add_gritter('<a href="http://emotion-classification.herokuapp.com"> Emotion Classification using Randomized Forests</a>', :title => "My Latest Hack", :time => 400000 ) %>
+<%= add_gritter('<a target="_blank" href="http://emotion-classification.herokuapp.com"> Emotion Classification using Random Forests</a>', :title => "My Latest Hack", :time => 400000 ) %>
 </script>
 <% cookies["saw_popup"] = { :value => "true", :expires => 1.day.from_now } %>
 <% end %>
@@ -55,7 +55,7 @@ $.notification('Thank you for contacting me!', {
 
 	<hr/>
 
-<div style="position:absolute; top:118px; right:30px; width: 730px;">
+<div style="position:absolute; top:118px; right:30px; width: 730px;" class="marquee_container">
 <span style="text-size:9px; position:absolute;" headline>
 Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineering where he majored in Computer Science and minored in Economics. A former member of the <a href="http://www.dormroomfund.com/about" target="_blank">Dorm Room Fund</a> and <a href="http://apply.hackny.org" target="_blank">HackNY Fellow</a> (Class of 2011), Cole is passionate about technological entrepreneurship. Currently, Cole is a Program Manager at Microsoft.</span> 
 </div>
@@ -69,7 +69,8 @@ Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineeri
 		<div class="main">
 			<div class="pagetitle">Cole Diamond - Welcome</div>
 
-				<iframe width="350" height="220" src="http://www.youtube.com/embed/VBOKFAnVjas?autoplay=1" frameborder="0" allowfullscreen style="float:right; position:relative; right: 57px;"></iframe>
+				<!-- disable autoplay with autoplay=0 -->
+				<iframe width="350" height="220" src="http://www.youtube.com/embed/VBOKFAnVjas?autoplay=0"  frameborder="0" allowfullscreen style="float:right; position:relative; right: 57px;"></iframe>
 
 		</p>
 	
@@ -85,7 +86,7 @@ Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineeri
 	<div class="sidebar" >
 		<h2 >About Me</h2>
 
-		<a title="Cole Diamond" href="<%= asset_path("profile_picture.jpg") %>" aboutme>
+		<a  href="<%= asset_path("profile_picture.jpg") %>" aboutme>
 			<%= image_tag "profile_picture.jpg", :width => "80", :height=>"80" %></a>
 			<ul style="font-size:10px; width:300px;">
 				<li>Columbia Engineering, 2013</li>
@@ -334,6 +335,7 @@ Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineeri
 		{
 
 
+			setTimeout(function(){$(".marquee_container").hide()}, 34000);
 		// 	$.notification('Latest hack: <a href="emotion-classification.herokuapp.com"> Emotion Classification using Randomized Forests</a>', {
 		// 	className: 'jquery-notification',
 		// 	duration: 5000,
