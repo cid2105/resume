@@ -66,6 +66,7 @@ GEM
     minitest (4.7.5)
     multi_json (1.8.2)
     netrc (0.7.7)
+    newrelic_rpm (3.6.9.171)
     pg (0.17.0)
     polyglot (0.3.3)
     protected_attributes (1.0.3)
@@ -140,6 +141,7 @@ DEPENDENCIES
   gritter (= 1.0.3)
   heroku
   jquery-rails
+  newrelic_rpm
   pg
   protected_attributes
   rails (>= 4.0.0)
