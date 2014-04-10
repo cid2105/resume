@@ -43,6 +43,7 @@ $.notification('Thank you for contacting me!', {
 		    </div>
 		<ul id="menu">
 			<li class="active"><a href="#home">Home</a></li>
+			<li ><a href="#about">About</a></li>
 			<li><a href="#skills">Software</a></li>
 			<li><a href="#hardware">Hardware</a></li>
 			<li><a href="#education">Education</a></li>
@@ -55,10 +56,10 @@ $.notification('Thank you for contacting me!', {
 
 	<hr/>
 
-<div style="position:absolute; top:118px; right:30px; width: 730px;" class="marquee_container">
+<!-- <div style="position:absolute; top:118px; right:30px; width: 730px;" class="marquee_container">
 <span style="text-size:9px; position:absolute;" headline>
 Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineering where he majored in Computer Science and minored in Economics. A former member of the <a href="http://www.dormroomfund.com/about" target="_blank">Dorm Room Fund</a> and <a href="http://apply.hackny.org" target="_blank">HackNY Fellow</a> (Class of 2011), Cole is passionate about technological entrepreneurship. Currently, Cole is a Program Manager at Microsoft.</span> 
-</div>
+</div> -->
 
 		<!-- Content --><div id="content">
 
@@ -89,7 +90,8 @@ Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineeri
 		<a  href="<%= asset_path("profile_picture.jpg") %>" aboutme>
 			<%= image_tag "profile_picture.jpg", :width => "80", :height=>"80" %></a>
 			<ul style="font-size:10px; width:300px;">
-				<li>Columbia Engineering, 2013</li>
+				<li>SM in <a href="http://www.seas.harvard.edu/programs/graduate/computational-science-and-engineering/master-of-science-in-cse">CSE</a> @ Harvard, 2015</li>
+				<li>BS in CS @ Columbia, 2013</li>
 				
 				<li><a href="http://apply.hackny.org" target="_blank">HackNY Fellow</a> (2011)</li>
 				<li><a href="http://www.dormroomfund.com/about" target="_blank">Dorm Room Fund</a> (2013)<br/>
@@ -105,7 +107,17 @@ Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineeri
 
 		
 
-	
+
+		<!-- Menu Networks --><div id="menu_about" class="contentitem">
+			<div class="pagetitle">Cole Diamond - About</div>
+		<h1>About me</h1>
+
+			<ul class="networks">
+				<p>
+			Hailing from Great Neck, New York, Cole Diamond is a alumnus of Columbia Engineering where he majored in Computer Science and minored in Economics. Currently, Cole Diamond is a student in the <a href="http://www.seas.harvard.edu/programs/graduate/computational-science-and-engineering/master-of-science-in-cse">Computational Science and Engineering masters program</a> at Harvard. A former member of the <a href="http://www.dormroomfund.com/about" target="_blank">Dorm Room Fund</a> and <a href="http://apply.hackny.org" target="_blank">HackNY Fellow</a> (Class of 2011), Cole is passionate about technological entrepreneurship. Cole is also a former Program Manager at Microsoft.</p> 
+			</ul>
+			</div><!-- End Menu About -->
+
 
 
 
@@ -177,10 +189,17 @@ Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineeri
 				<div class="main">
 		<h1>Curriculum Vitae</h1>
 			<ul class="skills" special>
+				<li><span class="topic">Harvard University (2014-2015)</span>
+				SM, Computational Science &amp; Engineering
 				<li><span class="topic">Columbia University (2009-2013)</span>
-				BS, Computer Science, Economics Minor (3.7/4.0) </li>
-				<li><span class="topic">John L Miller Great Neck North High School</span><a href="http://www.antonnews.com/greatneckrecord/news/1261-the-class-of-2009honors-and-awards-.html" target="_blank" no_underline>Valedictorian of the Class of 2009</a></li>
-				<li><span class="topic">Distinctions</span>HackNY Fellow, National AP Scholar, 2360/2400 SAT <span style="margin-top: 5px; position:relative; left:159px;"> Deans List (All Semesters), President of ACM at Columbia</span></li>
+				BS, Computer Science, Economics Minor (3.7/4.0)
+				<span style="top: 5px; position:relative; left:159px;">  
+				HackNY Fellow, Deans List (2009-2013), 
+				<span style="position:relative; top:5px;">President of ACM at Columbia</span></span>
+				</li>
+				<li><span class="topic">John L Miller Great Neck North High School</span><a href="http://www.antonnews.com/greatneckrecord/news/1261-the-class-of-2009honors-and-awards-.html" target="_blank" no_underline>Valedictorian of the Class of 2009</a>
+				<br/><span style="top: 5px; position:relative; left:159px;"> National AP Scholar, 2360/2400 SAT</span> </li>
+				
 			</ul>
 				</div>
 				<div class="sidebar" style="margin-bottom:0px; padding:0px; font-size:10px;">
@@ -335,6 +354,8 @@ Hailing from Great Neck, New York, Cole Diamond is alumnus of Columbia Engineeri
 
 
 			setTimeout(function(){$(".marquee_container").hide()}, 34000);
+		
+
 		// 	$.notification('Latest hack: <a href="emotion-classification.herokuapp.com"> Emotion Classification using Randomized Forests</a>', {
 		// 	className: 'jquery-notification',
 		// 	duration: 5000,
